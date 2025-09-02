@@ -12,7 +12,6 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
   { name: 'Clients', href: '#clients' },
-  { name: 'Work', href: '#work' },
   { name: 'Process', href: '#process' },
 ];
 
@@ -44,9 +43,11 @@ export default function Header() {
                 <Link href={link.href}>{link.name}</Link>
               </Button>
             ))}
-             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold ml-4">
-              <Link href="#contact">Contact Us</Link>
-            </Button>
+             <Link href="#contact" className="gradient-border-button ml-4">
+                <div className="content bg-card text-card-foreground font-bold px-6 py-2 rounded-full">
+                    Contact Us
+                </div>
+            </Link>
           </nav>
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>

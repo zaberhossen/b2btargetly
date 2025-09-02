@@ -96,3 +96,31 @@
     opacity: 1;
   }
 }
+
+@layer components {
+  .gradient-border-button {
+    @apply relative p-px rounded-full;
+  }
+  .gradient-border-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: conic-gradient(from var(--gradient-angle, 0deg), hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+    animation: rotate-gradient 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .gradient-border-button:hover::before {
+    opacity: 1;
+  }
+  .gradient-border-button .content {
+    @apply relative z-10;
+  }
+
+  @keyframes rotate-gradient {
+    to {
+      --gradient-angle: 360deg;
+    }
+  }
+}

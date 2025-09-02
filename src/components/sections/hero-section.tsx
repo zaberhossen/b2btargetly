@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SectionWrapper from '../section-wrapper';
 import { ArrowRight, Globe, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function HeroSection() {
   return (
@@ -33,8 +34,12 @@ export default function HeroSection() {
             generation, research, and digital solutions.
           </p>
           <div className="mt-8 flex items-center justify-center">
-            <Link href="#contact">
-              <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
+            <Link href="#contact" className="gradient-border-button">
+              <div
+                className={cn(
+                  'content group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full'
+                )}
+              >
                 <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
                   <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">
                     <Globe className="animate-spin" size={18} />

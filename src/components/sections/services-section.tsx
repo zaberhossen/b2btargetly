@@ -58,10 +58,10 @@ const serviceData: ServiceCategory[] = [
 
 export default function ServicesSection() {
   return (
-    <SectionWrapper id="services">
+    <SectionWrapper id="services" className="section-glow relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center fade-in-up">
-          <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl text-primary">Our Services</h2>
+          <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl text-foreground">Our Services</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
             Comprehensive solutions to fuel your business growth.
           </p>
@@ -69,16 +69,16 @@ export default function ServicesSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceData.map((category, index) => (
             <div key={category.category} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <Card className="h-full bg-card/50 hover:border-accent transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <Card className="h-full bg-secondary/50 border-border/50 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-indigo-500/10">
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl text-accent">{category.category}</CardTitle>
+                  <CardTitle className="font-headline text-2xl text-foreground">{category.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-4">
                     {category.services.map((service) => (
                       <li key={service.title} className="flex items-center gap-4">
-                        <service.icon className="h-6 w-6 text-primary" />
-                        <span className="text-foreground">{service.title}</span>
+                        <service.icon className="h-6 w-6 text-indigo-400" />
+                        <span className="text-muted-foreground">{service.title}</span>
                       </li>
                     ))}
                   </ul>

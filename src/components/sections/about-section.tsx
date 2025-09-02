@@ -9,11 +9,11 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <SectionWrapper id="about" className="bg-muted/20">
+    <SectionWrapper id="about" className="section-glow relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in-up">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl text-primary">About Us</h2>
+            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl text-foreground">About Us</h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
               At LeadSphere, we help businesses grow by turning data into valuable deals. We specialize in B2B lead generation, data solutions, and creative digital services that help companies scale.
             </p>
@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
               {stats.map((stat) => (
                 <div key={stat.label} className="p-4 rounded-lg">
-                  <div className="text-4xl sm:text-5xl font-bold text-accent font-headline">
+                  <div className="text-4xl sm:text-5xl font-bold text-indigo-400 font-headline">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>

@@ -26,12 +26,14 @@ const SectionWrapper = React.forwardRef<HTMLElement, SectionWrapperProps>(
       <section
         ref={combinedRef}
         className={cn(
-          "w-full py-16 md:py-24 lg:py-28",
+          "w-full py-16 md:py-24 lg:py-28 relative overflow-hidden",
           isInView ? "is-in-view" : "",
           className
         )}
         {...props}
       >
+        <div className="bg-primary absolute -top-10 left-1/2 h-16 w-44 -translate-x-1/2 rounded-full opacity-40 blur-3xl select-none"></div>
+        <div className="via-primary/50 absolute top-0 left-1/2 h-px w-3/5 -translate-x-1/2 bg-gradient-to-r from-transparent to-transparent transition-all ease-in-out"></div>
         {children}
       </section>
     );

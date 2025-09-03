@@ -123,4 +123,35 @@
       --gradient-angle: 360deg;
     }
   }
+
+  .globe {
+    --color-globe: hsl(var(--primary));
+    --color-globe-lines: hsl(var(--border));
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: globe-spin 30s infinite linear;
+    --globe-width: 500px;
+    --globe-height: 500px;
+  }
+  .globe-wrap {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .globe-arc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--color-globe-lines);
+  }
+
+  @keyframes globe-spin {
+    from { transform: rotateY(0deg) rotateX(20deg); }
+    to { transform: rotateY(360deg) rotateX(20deg); }
+  }
 }

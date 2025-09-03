@@ -2,6 +2,7 @@ import Link from 'next/link';
 import SectionWrapper from '../section-wrapper';
 import { ArrowRight, Globe, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import AnimatedGlobe from '../animated-globe';
 
 export default function HeroSection() {
   return (
@@ -11,6 +12,7 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+        <AnimatedGlobe className="absolute inset-0 z-0 opacity-20" />
       </div>
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="fade-in-up">

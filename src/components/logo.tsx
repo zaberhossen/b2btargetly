@@ -6,26 +6,28 @@ import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
 export function Logo({ className }: { className?: string }) {
-  const [logoSrc, setLogoSrc] = useState('/logo.gif');
+  const [logoSrc, setLogoSrc] = useState('https://picsum.photos/32/32');
 
   useEffect(() => {
-    // Reset the GIF to replay it on load
-    setLogoSrc(`/logo.gif?t=${new Date().getTime()}`);
+    // This is a placeholder, we'll get a real animated GIF soon.
+    const uniqueLogoSrc = `https://picsum.photos/32/32?t=${new Date().getTime()}`;
+    setLogoSrc(uniqueLogoSrc);
   }, []);
 
   const handleMouseEnter = () => {
-    // Appending a timestamp makes the browser reload the GIF, creating a loop effect on hover
-    setLogoSrc(`/logo.gif?t=${new Date().getTime()}`);
+    const uniqueLogoSrc = `https://picsum.photos/32/32?t=${new Date().getTime()}`;
+    setLogoSrc(uniqueLogoSrc);
   };
 
   return (
     <Link href="/" className={cn('flex items-center gap-2 text-3xl font-bold font-headline text-primary-foreground hover:text-primary-foreground/90 transition-colors', className)}>
       <Image 
         src={logoSrc} 
-        alt="LeadSphere Logo" 
+        alt="LeadSphere Logo"
+        data-ai-hint="logo sphere"
         width={32} 
         height={32}
-        unoptimized // Needed for GIFs
+        unoptimized
         onMouseEnter={handleMouseEnter}
       />
       LeadSphere

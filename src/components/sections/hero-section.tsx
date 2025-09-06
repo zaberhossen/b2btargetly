@@ -17,14 +17,10 @@ export default function HeroSection() {
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="fade-in-up">
           <div className="flex justify-center items-center mb-4">
-            <div className="flex items-center gap-1 text-sm border border-border rounded-lg px-2 py-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <span className="ml-2 text-muted-foreground">
-                5.0 from 180+ happy clients
+            <div className="flex items-center gap-2 text-sm border border-border rounded-lg px-3 py-1 bg-card/50">
+              <Star className="w-5 h-5 text-primary fill-primary" />
+              <span className="text-muted-foreground font-semibold">
+                Top-Rated • 180+ happy clients
               </span>
             </div>
           </div>

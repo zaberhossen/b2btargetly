@@ -39,7 +39,7 @@ export default function Header() {
           <Logo />
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => (
-              <Button key={link.name} variant="ghost" asChild className="text-foreground/80 font-semibold text-base hover:text-primary transition-colors">
+              <Button key={link.name} variant="ghost" asChild className="text-foreground/80 font-semibold text-base transition-colors rounded-full border-2 border-transparent hover:border-foreground hover:text-foreground">
                 <Link href={link.href}>{link.name}</Link>
               </Button>
             ))}

@@ -69,7 +69,7 @@ export default function ServicesSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceData.map((category, index) => (
             <div key={category.category} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <Card className="h-full bg-secondary/50 border-border/50 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-indigo-500/10">
+              <Card className="h-full bg-secondary/50 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-primary/10">
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl text-foreground">{category.category}</CardTitle>
                 </CardHeader>
@@ -77,7 +77,7 @@ export default function ServicesSection() {
                   <ul className="space-y-4">
                     {category.services.map((service) => (
                       <li key={service.title} className="flex items-center gap-4">
-                        <service.icon className="h-6 w-6 text-indigo-400" />
+                        <service.icon className="h-6 w-6 text-primary" />
                         <span className="text-muted-foreground">{service.title}</span>
                       </li>
                     ))}

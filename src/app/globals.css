@@ -27,25 +27,25 @@
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 215.4 16.3% 46.9%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 210 40% 98%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --background: 236 96% 13%; /* #020540 */
+    --foreground: 180 80% 95%; /* Lighter version of #B3F2F2 */
+    --card: 236 96% 16%; /* Slightly lighter than background */
+    --card-foreground: 180 80% 95%;
+    --popover: 236 96% 13%;
+    --popover-foreground: 180 80% 95%;
+    --primary: 265 89% 68%; /* #7D29F2 */
+    --primary-foreground: 180 80% 95%;
+    --secondary: 260 59% 40%; /* #5129A6 */
+    --secondary-foreground: 180 80% 95%;
+    --muted: 260 59% 30%;
+    --muted-foreground: 180 50% 80%;
+    --accent: 214 70% 60%; /* #367DD9 */
+    --accent-foreground: 236 96% 13%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    --border: 260 59% 30%;
+    --input: 260 59% 30%;
+    --ring: 265 89% 68%;
   }
 }
 
@@ -83,7 +83,7 @@
     height: 100%;
     background-image: radial-gradient(
       ellipse 50% 50% at 50% 0%,
-      rgba(120, 119, 198, 0.3),
+      hsla(var(--primary), 0.3),
       rgba(255, 255, 255, 0)
     );
     opacity: 0;

@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
               {stats.map((stat) => (
                 <div key={stat.label} className="p-4 rounded-lg">
-                  <div className="text-4xl sm:text-5xl font-bold text-indigo-400 font-headline">
+                  <div className="text-4xl sm:text-5xl font-bold text-primary font-headline">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>

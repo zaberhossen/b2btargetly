@@ -43,7 +43,7 @@ export default function WorkProcessSection() {
           {processSteps.map((item, index) => (
             <div key={item.step} className="grid md:grid-cols-2 md:gap-8 items-center my-8 md:my-0 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className={`md:flex ${index % 2 === 0 ? 'justify-end' : 'justify-start'} ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
-                <div className="w-full max-w-md p-6 rounded-lg bg-card/50 border border-border/50 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-indigo-500/10">
+                <div className="w-full max-w-md p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-primary/10">
                     <div className={`flex items-center gap-4 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                         <div className="flex-shrink-0 bg-accent text-accent-foreground rounded-full h-12 w-12 flex items-center justify-center">
                             <item.icon className="h-6 w-6" />

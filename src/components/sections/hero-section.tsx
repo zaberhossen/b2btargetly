@@ -20,7 +20,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-2 text-sm border border-border rounded-lg px-3 py-1 bg-card/50">
               <Star className="w-5 h-5 text-primary fill-primary" />
               <span className="text-muted-foreground font-semibold">
-                Top-Rated • 180+ happy clients
+                Top-Rated • 180+ Happy Clients
               </span>
             </div>
           </div>

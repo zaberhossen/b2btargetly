@@ -45,7 +45,7 @@ export default function Header() {
                 </div>
               </Link>
             ))}
-             <Link href="#contact" className="gradient-border-button ml-4">
+             <Link href="#contact" className="gradient-border-button always-on ml-4">
                 <div className="content bg-card text-card-foreground font-bold px-6 py-2 rounded-full">
                     Contact Us
                 </div>

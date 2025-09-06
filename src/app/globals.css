@@ -111,7 +111,8 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
-  .gradient-border-button:hover::before {
+  .gradient-border-button:hover::before,
+  .gradient-border-button.always-on::before {
     opacity: 1;
   }
   .gradient-border-button .content {

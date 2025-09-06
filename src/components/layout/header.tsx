@@ -40,7 +40,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => (
               <Link href={link.href} key={link.name} className="gradient-border-button">
-                 <div className="content bg-transparent text-foreground/80 hover:text-foreground font-semibold px-4 py-2 rounded-full">
+                 <div className="content bg-transparent text-foreground/80 hover:bg-card hover:text-foreground font-semibold px-4 py-2 rounded-full">
                     {link.name}
                 </div>
               </Link>

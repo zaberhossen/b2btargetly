@@ -28,8 +28,7 @@ export default function HeroSection() {
             Where Data Turns Into Deals.
           </h1>
           <p className="mt-6 max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-            We transform raw data into real business opportunities through lead
-            generation, research, and digital solutions.
+            Transform raw data into real business opportunities through AI-powered lead generation, research, and digital solutions. Trusted by 180+ companies across 20+ countries.
           </p>
           <div className="mt-8 flex items-center justify-center">
             <Link href="#contact" className="gradient-border-button">

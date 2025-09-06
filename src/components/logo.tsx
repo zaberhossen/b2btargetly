@@ -10,8 +10,8 @@ export function Logo({ className }: { className?: string }) {
 
   // By adding a query string that changes, we can force the GIF to replay.
   const logoSrc = isHovering 
-    ? `https://s6.imgcdn.dev/YQSJlK.gif?hover=${Date.now()}` 
-    : `https://s6.imgcdn.dev/YQSJlK.gif?load=${Date.now()}`;
+    ? `https://s6.imgcdn.dev/YQSoVo.gif?hover=${Date.now()}` 
+    : `https://s6.imgcdn.dev/YQSoVo.gif?load=${Date.now()}`;
 
   return (
     <Link 

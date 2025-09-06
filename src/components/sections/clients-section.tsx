@@ -1,11 +1,8 @@
 "use client";
 
-import React, { useState, useTransition } from 'react';
+import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import SectionWrapper from '../section-wrapper';
-import { summarizeTestimonials, SummarizeTestimonialsInput } from '@/ai/flows/ai-powered-testimonial-summarizer';
-import { Bot, Sparkles } from 'lucide-react';
 
 const testimonials = [
   {
@@ -19,19 +16,6 @@ const testimonials = [
 ];
 
 export default function ClientsSection() {
-  const [summary, setSummary] = useState('');
-  const [isPending, startTransition] = useTransition();
-
-  const handleSummarize = () => {
-    const reviews = testimonials.map(t => t.quote).join('\n');
-    const input: SummarizeTestimonialsInput = { reviews };
-
-    startTransition(async () => {
-      const result = await summarizeTestimonials(input);
-      setSummary(result.summary);
-    });
-  };
-
   return (
     <SectionWrapper id="clients" className="bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,27 +39,6 @@ export default function ClientsSection() {
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <Button onClick={handleSummarize} disabled={isPending} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
-            {isPending ? "Summarizing..." : "Summarize with AI"}
-            <Sparkles className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-        {summary && (
-          <div className="mt-8 fade-in-up">
-            <Card className="bg-primary/10 border-primary/50">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <Bot className="h-8 w-8 text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-headline font-semibold text-primary">AI Summary</h3>
-                    <p className="mt-2 text-foreground">{summary}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        )}
       </div>
     </SectionWrapper>
   );

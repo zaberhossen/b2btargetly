@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 's6.imgcdn.dev',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };

@@ -30,8 +30,8 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-sm',
-        isScrolled ? 'shadow-md border-b border-border/50' : ''
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled ? 'shadow-md border-b border-border/50 bg-background/80 backdrop-blur-sm' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +39,7 @@ export default function Header() {
           <Logo />
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => (
-              <Button key={link.name} variant="ghost" asChild className="text-foreground/80 font-semibold text-base hover:text-foreground transition-colors">
+              <Button key={link.name} variant="ghost" asChild className="text-foreground/80 font-semibold text-base hover:text-primary transition-colors">
                 <Link href={link.href}>{link.name}</Link>
               </Button>
             ))}
@@ -69,7 +69,7 @@ export default function Header() {
                   <nav className="flex flex-col space-y-4 p-4">
                     {navLinks.map((link) => (
                       <SheetClose key={link.name} asChild>
-                        <Link href={link.href} className="text-lg font-medium hover:text-accent-foreground transition-colors">
+                        <Link href={link.href} className="text-lg font-medium hover:text-primary transition-colors">
                           {link.name}
                         </Link>
                       </SheetClose>

@@ -20,3 +20,5 @@
 - Use clean, line-based icons for services and features, maintaining a modern and consistent aesthetic.
 - Implement a responsive grid layout with clear section divisions to ensure optimal viewing across devices. A minimalist design is ideal for this portfolio site.
 - Use subtle transitions and hover effects to provide feedback and enhance user engagement, but avoid overwhelming animations.
+
+--

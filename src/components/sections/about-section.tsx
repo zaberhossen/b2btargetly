@@ -9,26 +9,26 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <SectionWrapper id="about" className="section-glow relative">
+    <SectionWrapper id="about" className="section-glow relative py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="fade-in-up">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl text-foreground">About Us</h2>
-            <p className="mt-4 text-muted-foreground md:text-lg">
-              At LeadSphere, we help businesses grow by turning data into valuable deals. We specialize in B2B lead generation, data solutions, and creative digital services that help companies scale.
+          <div className="fade-in-up space-y-4">
+            <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">About Us</h2>
+            <p className="text-muted-foreground md:text-lg/relaxed">
+              At b2btargetly, we help businesses grow by turning data into valuable deals. We specialize in B2B lead generation, data solutions, and creative digital services that help companies scale.
             </p>
-             <p className="mt-4 text-muted-foreground md:text-lg">
+             <p className="text-muted-foreground md:text-lg/relaxed">
               With a proven track record as a Top-Rated Freelancer on platforms like LinkedIn, we are committed to delivering excellence and driving results for our clients across the globe.
             </p>
           </div>
-          <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-              {stats.map((stat) => (
-                <div key={stat.label} className="p-4 rounded-lg">
+          <div className="scale-in">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              {stats.map((stat, index) => (
+                <div key={stat.label} className="p-6 rounded-xl glass-effect hover:scale-105 transition-transform duration-300">
                   <div className="text-4xl sm:text-5xl font-bold text-primary font-headline">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
+                  <p className="mt-2 text-sm text-muted-foreground font-medium">{stat.label}</p>
                 </div>
               ))}
             </div>

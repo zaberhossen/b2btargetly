@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { Toaster } from '@/components/ui/toaster';
+// import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'LeadSphere - Where Data Turns Into Deals',
+  title: 'b2btargetly - Where Data Turns Into Deals',
   description: 'We transform raw data into real business opportunities through lead generation, research, and digital solutions.',
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased')}>
         {children}
-        <Toaster />
+        {/* <Toaster /> */}
       </body>
     </html>
   );

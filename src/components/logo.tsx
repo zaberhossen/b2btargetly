@@ -9,17 +9,17 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link 
       href="/" 
-      className={cn('flex items-center gap-2 text-3xl font-bold font-headline text-primary-foreground hover:text-primary-foreground/90 transition-colors', className)}
+      className={cn('flex items-center gap-2 md:text-3xl font-bold font-headline text-white transition-colors', className)}
     >
       <Image 
-        src="https://s6.imgcdn.dev/YQSppO.gif" 
-        alt="LeadSphere Logo"
+        src="/logo.svg" 
+        alt="b2btargetly Logo"
         data-ai-hint="logo sphere"
         width={32} 
         height={32}
         unoptimized
       />
-      LeadSphere
+      B2BTargetly
     </Link>
   );
 }

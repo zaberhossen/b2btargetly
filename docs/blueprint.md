@@ -1,4 +1,4 @@
-# **App Name**: LeadSphere Portfolio
+# **App Name**: b2btargetly Portfolio
 
 ## Core Features:
 
@@ -6,7 +6,7 @@
 - Interactive Lead Data Visualization: Use generative AI to create dynamic charts and graphs to visually represent lead generation and data analysis results, tailored to different client sectors, sourced from work samples.
 - AI-Powered Testimonial Summarizer: Summarize client reviews using a generative AI tool for quick insights into the project's success, extracting key positive feedback to improve communication on the landing page.
 - Contact Form with Validation: Implement a user-friendly contact form with real-time validation and auto-completion for email, WhatsApp and LinkedIn URL entries. Submission will send notification to rabbibabu007@gmail.com.
-- Animated Statistics Counter: Display key statistics (1200+ projects, 180+ clients, 20+ countries) with animated counters to showcase LeadSphere's achievements engagingly.
+- Animated Statistics Counter: Display key statistics (1200+ projects, 180+ clients, 20+ countries) with animated counters to showcase b2btargetly's achievements engagingly.
 - Filterable Work Samples: Organize and display work samples (lead sheets, designs, websites, dashboards) in a filterable gallery, enabling visitors to quickly find relevant projects based on type or industry.
 - Social Media Integration: Embed LinkedIn feed and other social media links to provide real-time updates and engage visitors.
 

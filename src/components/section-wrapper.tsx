@@ -10,7 +10,7 @@ interface SectionWrapperProps extends React.HTMLAttributes<HTMLElement> {
 
 const SectionWrapper = React.forwardRef<HTMLElement, SectionWrapperProps>(
   ({ children, className, ...props }, forwardedRef) => {
-    const [ref, isInView] = useInView({ triggerOnce: true });
+    const [ref, isInView] = useInView();
 
     const combinedRef = (node: HTMLElement | null) => {
       // @ts-ignore

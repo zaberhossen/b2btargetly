@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} LeadSphere. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} b2btargetly. All rights reserved.</p>
         </div>
       </div>
     </footer>

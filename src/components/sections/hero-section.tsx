@@ -8,36 +8,75 @@ export default function HeroSection() {
   return (
     <SectionWrapper
       id="home"
-      className="relative overflow-hidden min-h-dvh flex items-center justify-center text-center !py-0"
+      className="relative overflow-hidden min-h-dvh flex items-center justify-center text-center py-0!"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-        <AnimatedGlobe className="absolute inset-0 z-0 opacity-20" />
+        <div className="absolute inset-0 bg-background/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <AnimatedGlobe className="z-0 opacity-30" />
+        </div>
       </div>
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="fade-in-up">
-          <div className="flex justify-center items-center mb-4">
-            <div className="flex items-center gap-2 text-sm border border-border rounded-lg px-3 py-1 bg-card/50">
-              <Star className="w-5 h-5 text-primary fill-primary" />
-              <span className="text-muted-foreground font-semibold">
+          <div className="flex justify-center items-center mb-6">
+            <div className="hover-border-gradient flex items-center gap-2 text-sm rounded-full px-4 py-2 bg-card/30 backdrop-blur-sm">
+              <Star className="w-4 h-4 text-primary fill-primary animate-spin duration-2000" />
+              <span className="text-muted-foreground font-medium">
                 Top-Rated • 180+ Happy Clients
               </span>
             </div>
           </div>
-          <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-foreground">
-            Where Data Turns Into Deals.
+          <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-foreground bg-clip-text flex flex-wrap justify-center gap-x-3">
+            {Array.from(
+              new Intl.Segmenter("en", { granularity: "word" }).segment(
+                "Where Data Turns Into Deals."
+              )
+            ).map((seg, i) => (
+              <span
+                key={i}
+                className="inline-block opacity-0 animate-reveal"
+                style={{
+                  animationDelay: `${i * 0.15}s`,
+                  animationFillMode: "forwards",
+                }}
+              >
+                {seg.segment}
+              </span>
+            ))}
           </h1>
-          <p className="mt-6 max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-            Transform raw data into real business opportunities through AI-powered lead generation, research, and digital solutions. Trusted by 180+ companies across 20+ countries.
+          <p className="mt-6 max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed">
+            {"Transform raw data into real business opportunities through AI-powered lead generation, research, and digital solutions. Trusted by 180+ companies across 20+ countries."
+              .split(" ")
+              .map((word, wordIndex, arr) => (
+                <span key={wordIndex}>
+                  <span className="inline-block">
+                    {word.split("").map((char, charIndex) => (
+                      <span key={charIndex} className="word-pull-up-container">
+                        <span
+                          className="word-pull-up"
+                          style={{
+                            animationDelay: `${
+                              0.84 + (wordIndex * 5 + charIndex) * 0.015
+                            }s`,
+                          }}
+                        >
+                          {char}
+                        </span>
+                      </span>
+                    ))}
+                  </span>
+                  {wordIndex < arr.length - 1 && ' '}
+                </span>
+              ))}
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center">
+          <div className="mt-10 flex flex-col items-center justify-center">
             <svg
-              width="100"
-              height="50"
+              width="80"
+              height="40"
               viewBox="0 0 100 50"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
-              className="text-foreground mb-4"
+              className="text-muted-foreground/50 mb-6 animate-bounce"
             >
               <path d="M68.6958 5.40679C67.3329 12.7082 68.5287 20.1216 68.5197 27.4583C68.5189 29.5382 68.404 31.6054 68.1147 33.682C67.9844 34.592 69.4111 34.751 69.5414 33.8411C70.5618 26.5016 69.2488 19.104 69.4639 11.7325C69.5218 9.65887 69.7222 7.6012 70.0939 5.56265C70.1638 5.1949 69.831 4.81112 69.4601 4.76976C69.0891 4.72841 68.7689 5.01049 68.6958 5.40679Z"></path>
               <path d="M74.0117 26.1349C73.2662 27.1206 72.5493 28.1096 72.0194 29.235C71.5688 30.167 71.2007 31.137 70.7216 32.0658C70.4995 32.5033 70.252 32.9091 69.9475 33.3085C69.8142 33.4669 69.6779 33.654 69.5161 33.8093C69.4527 33.86 68.9199 34.2339 68.9167 34.2624C68.9263 34.1768 69.0752 34.3957 69.0055 34.2434C68.958 34.1515 68.8534 34.0531 68.8058 33.9612C68.6347 33.6821 68.4637 33.403 68.264 33.1208L67.1612 31.3512C66.3532 30.0477 65.5199 28.7126 64.7119 27.4093C64.5185 27.0699 63.9701 27.0666 63.7131 27.2979C63.396 27.5514 63.4053 27.9858 63.6018 28.2966C64.3845 29.5683 65.1956 30.8431 65.9783 32.1149L67.1572 33.9796C67.5025 34.5093 67.8225 35.2671 68.428 35.5368C69.6136 36.0446 70.7841 34.615 71.3424 33.7529C71.9992 32.786 72.4085 31.705 72.9035 30.6336C73.4842 29.3116 74.2774 28.1578 75.1306 26.9818C75.7047 26.2369 74.5573 25.3868 74.0117 26.1349ZM55.1301 12.2849C54.6936 18.274 54.6565 24.3076 55.0284 30.3003C55.1293 31.987 55.2555 33.7056 55.4419 35.4019C55.5431 36.3087 56.9541 36.0905 56.8529 35.1837C56.2654 29.3115 56.0868 23.3982 56.2824 17.4978C56.3528 15.8301 56.4263 14.1339 56.5537 12.4725C56.6301 11.5276 55.2034 11.3686 55.1301 12.2849Z"></path>
@@ -48,16 +87,16 @@ export default function HeroSection() {
             <Link href="#contact" className="gradient-border-button">
               <div
                 className={cn(
-                  'content group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full'
+                  "content group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-2.5 rounded-full"
                 )}
               >
-                <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
+                <div className="border border-border bg-primary h-10 rounded-full flex items-center justify-center text-primary-foreground">
                   <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">
                     <Globe className="animate-spin" size={18} />
                     Get started
                   </p>
                 </div>
-                <div className="text-muted-foreground group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-border">
+                <div className="text-muted-foreground group-hover:ml-4 ease-in-out transition-all size-6 flex items-center justify-center rounded-full border-2 border-border">
                   <ArrowRight
                     className="group-hover:rotate-180 ease-in-out transition-all"
                     size={14}
@@ -69,5 +108,5 @@ export default function HeroSection() {
         </div>
       </div>
     </SectionWrapper>
-  );
+  )
 }

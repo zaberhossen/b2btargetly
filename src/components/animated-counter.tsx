@@ -13,7 +13,7 @@ interface AnimatedCounterProps {
 
 export default function AnimatedCounter({ end, duration = 2000, prefix = "", suffix = "", className }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
-  const [ref, isInView] = useInView({ triggerOnce: true });
+  const [ref, isInView] = useInView();
   const animationFrameId = useRef<number>();
 
   useEffect(() => {

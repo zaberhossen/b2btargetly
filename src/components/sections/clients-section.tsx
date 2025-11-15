@@ -6,7 +6,7 @@ import SectionWrapper from '../section-wrapper';
 
 const testimonials = [
   {
-    quote: "LeadSphere helped us generate high-quality leads that converted into sales. Professional, fast, and reliable.",
+    quote: "b2btargetly helped us generate high-quality leads that converted into sales. Professional, fast, and reliable.",
     author: "Client, USA"
   },
   {
@@ -31,7 +31,7 @@ export default function ClientsSection() {
               <Card className="h-full bg-card/50">
                 <CardContent className="p-6">
                   <blockquote className="text-lg text-foreground">
-                    " {testimonial.quote} "
+                    "{testimonial.quote}"
                   </blockquote>
                   <p className="mt-4 text-right font-semibold text-accent">- {testimonial.author}</p>
                 </CardContent>

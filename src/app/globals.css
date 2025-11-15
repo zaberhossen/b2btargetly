@@ -47,13 +47,13 @@
   --card-foreground: 224 71.4% 4.1%;
   --popover: 0 0% 100%;
   --popover-foreground: 224 71.4% 4.1%;
-  --primary: 210 40% 98%;
+  --primary: 205 91% 55%;
   --primary-foreground: 215.4 16.3% 46.9%;
   --secondary: 220 14.3% 95.9%;
   --secondary-foreground: 220.9 39.3% 11%;
   --muted: 220 14.3% 95.9%;
   --muted-foreground: 220 8.9% 46.1%;
-  --accent: 215.4 16.3% 46.9%;
+  --accent: 205 91% 55%;
   --accent-foreground: 210 40% 98%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
@@ -70,13 +70,13 @@
   --card-foreground: 210 40% 98%;
   --popover: 222 47% 11%;
   --popover-foreground: 210 40% 98%;
-  --primary: 217 91% 60%; /* #3b82f6 - Vibrant blue */
+  --primary: 205 91% 55%; /* #3b82f6 - Vibrant blue */
   --primary-foreground: 222 47% 11%;
   --secondary: 217 33% 17%; /* #1e293b */
   --secondary-foreground: 210 40% 98%;
   --muted: 215 20% 20%;
   --muted-foreground: 217 10% 65%;
-  --accent: 217 91% 60%; /* Matching primary */
+  --accent: 205 91% 55%; /* Matching primary */
   --accent-foreground: 222 47% 11%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 210 40% 98%;
@@ -192,7 +192,7 @@ html { scroll-behavior: smooth; }
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: conic-gradient(from var(--gradient-angle), hsl(217deg 56.77% 31.21%), hsl(217deg 41.32% 18.23%), hsl(217deg 42.65% 39.52% / 50%), hsl(var(--secondary)), hsl(217deg 91.98% 49.2%));
+  background: conic-gradient(from var(--gradient-angle), hsl(217deg 56.77% 31.21%), hsl(217deg 41.32% 18.23%), hsl(217deg 42.65% 39.52% / 50%), hsl(var(--secondary)), hsl(205deg 91% 55%));
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);

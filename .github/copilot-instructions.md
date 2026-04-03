@@ -83,7 +83,7 @@ export async function submitContactForm(prevState, formData): Promise<FormState>
 ```
 - Uses Zod for validation
 - Returns structured error state with field-level messages
-- Email notification to `rabbibabu007@gmail.com` (not yet implemented)
+- Email notification to `info@b2btargetly.com` (not yet implemented)
 
 ## Component Creation Guidelines
 

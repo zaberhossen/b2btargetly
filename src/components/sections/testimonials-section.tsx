@@ -126,14 +126,14 @@ export default function TestimonialsSection() {
       <div className="container">
         <div className="fade-in-up text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary">
-            What Our Clients Say
+            Trusted by Industry Leaders
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Real feedback from businesses we've helped grow across 20+ countries
           </p>
         </div>
 
-        <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {featuredTestimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -152,13 +152,7 @@ export default function TestimonialsSection() {
               </Card>
             </div>
           ))}
-        </div>
-
-        <div className="fade-in-up text-center mb-8">
-          <h3 className="font-headline text-2xl md:text-3xl font-bold text-foreground">
-            Trusted by Industry Leaders
-          </h3>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative">
@@ -194,9 +188,7 @@ export default function TestimonialsSection() {
                     </p>
                   </div>
                 </div>
-                <p className="text-foreground text-sm">
-                  {testimonial.text}
-                </p>
+                <p className="text-foreground text-sm">{testimonial.text}</p>
               </Card>
             ))}
           </div>
@@ -238,7 +230,7 @@ export default function TestimonialsSection() {
                     </p>
                   </div>
                 </Card>
-              )
+              ),
             )}
           </div>
         </div>

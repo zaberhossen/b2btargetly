@@ -2,22 +2,30 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Process', href: '#process' },
-  { name: 'Testimonials', href: '#testimonials' },
+const homeNavLinks = [
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Process', href: '/#process' },
+  { name: 'Testimonials', href: '/#testimonials' },
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  const navLinks = homeNavLinks.map((link) => ({
+    ...link,
+    href: isHomePage && link.href.startsWith('/#') ? link.href.slice(1) : link.href,
+  }));
+  const contactHref = isHomePage ? '#contact' : '/#contact';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +60,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href={contactHref}
               className="gradient-border-button always-on ml-4"
             >
               <div className="content bg-card text-card-foreground font-bold px-6 py-2 rounded-full">
@@ -74,11 +82,11 @@ export default function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b">
                     <Logo />
-                    <SheetClose asChild>
+                    {/* <SheetClose asChild>
                       <Button variant="ghost" size="icon">
                         <X className="h-6 w-6" />
                       </Button>
-                    </SheetClose>
+                    </SheetClose> */}
                   </div>
                   <nav className="flex flex-col space-y-4 p-4">
                     {navLinks.map((link) => (
@@ -93,8 +101,8 @@ export default function Header() {
                     ))}
                     <SheetClose key={"#contact"} asChild>
                       <Link
-                        href="#contact"
-                        className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold mt-4"
+                        href={contactHref}
+                        className="rounded-full inline-block px-6 py-2 border border-primary! hover:bg-primary hover:text-primary-foreground text-primary font-bold mt-4"
                       >
                         Contact Us
                       </Link>

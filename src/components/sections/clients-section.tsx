@@ -25,7 +25,7 @@ export default function ClientsSection() {
             Real feedback from businesses we've helped grow.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <Card className="h-full bg-card/50">
@@ -38,7 +38,7 @@ export default function ClientsSection() {
               </Card>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </SectionWrapper>
   );
